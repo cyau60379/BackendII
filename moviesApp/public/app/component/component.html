@@ -1,0 +1,15 @@
+<div layout-gt-xs="row">
+    <md-input-container class="md-block" flex-gt-xs>
+        <label>Movie title</label>
+        <input value="{{$ctrl.movie.title}}" disabled>
+    </md-input-container>
+</div>
+<div layout-gt-sm="row">
+    <md-input-container class="md-block" flex-gt-sm>
+        <label>Rate the movie</label>
+        <input ng-model="rating">
+    </md-input-container>
+</div>
+<div>
+    <md-button ng-click='$ctrl.update(ctrl.movie, rating, $event)'>View Movie</md-button>
+</div>

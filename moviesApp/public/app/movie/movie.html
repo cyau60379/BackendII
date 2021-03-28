@@ -1,0 +1,14 @@
+<div style="margin: auto">
+    <div style="display: block ruby;width: 500px;margin: auto;">
+        <h2>Movie Name:</h2>
+        <div class="select">
+            <md-select placeholder="Select a movie" ng-model="selectedMovie">
+                <md-option ng-value="selectedMovie" ng-repeat="selectedMovie in $ctrl.movies">{{selectedMovie.title}}</md-option>
+            </md-select>
+        </div>
+    </div>
+    <div style="width: 500px;margin: auto;">
+        <h3>Rating: {{selectedMovie.rating}}</h3>
+        <movie-component movie="selectedMovie" rating="selectedMovie.rating" on-update="$ctrl.update(selectedMovie, rating, $event)"></movie-component>
+    </div>
+</div>
